@@ -1,8 +1,10 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
-import { BasicShapeModel } from "@syncfusion/ej2-angular-diagrams";
+import { BasicShapeModel,DiagramModule } from "@syncfusion/ej2-angular-diagrams";
 
 @Component({
   selector: 'app-root',
+standalone: true,
+  imports:[DiagramModule]
   template: `<ejs-diagram id="diagram" width="100%" height="580px" mode="SVG">
   <e-nodes>
       <e-node id='node1' [height]=60 [width]=100 [offsetX]=300 [offsetY]=80 [shape]='shape'>
